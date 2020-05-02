@@ -22,6 +22,7 @@
 		A7D63FC3245E1C5A00540744 /* StarWarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FC2245E1C5A00540744 /* StarWarListViewModel.swift */; };
 		A7D63FC5245E1D2400540744 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FC4245E1D2400540744 /* AppCoordinator.swift */; };
 		A7D63FC7245E1D4700540744 /* StarWarListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FC6245E1D4700540744 /* StarWarListCoordinator.swift */; };
+		A7D63FCA245E2BD200540744 /* StarWarListEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FC9245E2BD200540744 /* StarWarListEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A7D63FC2245E1C5A00540744 /* StarWarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarListViewModel.swift; sourceTree = "<group>"; };
 		A7D63FC4245E1D2400540744 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A7D63FC6245E1D4700540744 /* StarWarListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarListCoordinator.swift; sourceTree = "<group>"; };
+		A7D63FC9245E2BD200540744 /* StarWarListEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarListEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		A7D63FB6245D9D2B00540744 /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
+				A7D63FC9245E2BD200540744 /* StarWarListEndPoint.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D63F83245D9C4A00540744 /* StarWarsListViewController.swift in Sources */,
+				A7D63FCA245E2BD200540744 /* StarWarListEndPoint.swift in Sources */,
 				A7D63FC7245E1D4700540744 /* StarWarListCoordinator.swift in Sources */,
 				A7D63FBE245DA7F600540744 /* PeopleResponse.swift in Sources */,
 				A7D63FC5245E1D2400540744 /* AppCoordinator.swift in Sources */,

@@ -21,6 +21,9 @@ final class StarWarListCoordintor: Coordinator {
     
     func start() {
         guard starWarsListVC == navigationController?.viewControllers.first as? StarWarsListViewController else { return }
-        print("starList")
+    }
+    
+    func beginFlow() {
+        
     }
 }
