@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StarWarsListViewController.swift
 //  StarWars
 //
 //  Created by Renu Punjabi on 5/2/20.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class StarWarsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
     }
 
 

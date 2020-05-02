@@ -11,5 +11,6 @@ import UIKit
 
 protocol Coordinator {
     var returnViewController: UIViewController? { get set }
-    var navigationController: UINavigationController? { get set }
+    var navigationController: UINavigationController? { get }
+    func start()
 }
