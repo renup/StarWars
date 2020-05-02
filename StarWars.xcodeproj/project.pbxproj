@@ -15,6 +15,11 @@
 		A7D63F8B245D9C4C00540744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D63F89245D9C4C00540744 /* LaunchScreen.storyboard */; };
 		A7D63F96245D9C4C00540744 /* StarWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63F95245D9C4C00540744 /* StarWarsTests.swift */; };
 		A7D63FA1245D9C4C00540744 /* StarWarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FA0245D9C4C00540744 /* StarWarsUITests.swift */; };
+		A7D63FB8245D9F4F00540744 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FB7245D9F4F00540744 /* APIConfiguration.swift */; };
+		A7D63FBA245D9FB600540744 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FB9245D9FB600540744 /* Coordinator.swift */; };
+		A7D63FBC245DA0C400540744 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FBB245DA0C400540744 /* APIRouter.swift */; };
+		A7D63FBE245DA7F600540744 /* PeopleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FBD245DA7F600540744 /* PeopleResponse.swift */; };
+		A7D63FC0245E128C00540744 /* URLSession+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63FBF245E128C00540744 /* URLSession+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		A7D63F9C245D9C4C00540744 /* StarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D63FA0245D9C4C00540744 /* StarWarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsUITests.swift; sourceTree = "<group>"; };
 		A7D63FA2245D9C4C00540744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7D63FB7245D9F4F00540744 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		A7D63FB9245D9FB600540744 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A7D63FBB245DA0C400540744 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		A7D63FBD245DA7F600540744 /* PeopleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResponse.swift; sourceTree = "<group>"; };
+		A7D63FBF245E128C00540744 /* URLSession+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +162,7 @@
 		A7D63FB0245D9CF200540744 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				A7D63FBD245DA7F600540744 /* PeopleResponse.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -166,6 +177,7 @@
 		A7D63FB2245D9D0800540744 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A7D63FB9245D9FB600540744 /* Coordinator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -173,6 +185,7 @@
 		A7D63FB3245D9D1000540744 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A7D63FBF245E128C00540744 /* URLSession+Utilities.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,6 +195,7 @@
 			children = (
 				A7D63FB6245D9D2B00540744 /* EndPoints */,
 				A7D63FB5245D9D1F00540744 /* Routers */,
+				A7D63FB7245D9F4F00540744 /* APIConfiguration.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -189,6 +203,7 @@
 		A7D63FB5245D9D1F00540744 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				A7D63FBB245DA0C400540744 /* APIRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -332,8 +347,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D63F83245D9C4A00540744 /* ViewController.swift in Sources */,
+				A7D63FBE245DA7F600540744 /* PeopleResponse.swift in Sources */,
+				A7D63FBC245DA0C400540744 /* APIRouter.swift in Sources */,
+				A7D63FC0245E128C00540744 /* URLSession+Utilities.swift in Sources */,
 				A7D63F7F245D9C4A00540744 /* AppDelegate.swift in Sources */,
+				A7D63FBA245D9FB600540744 /* Coordinator.swift in Sources */,
 				A7D63F81245D9C4A00540744 /* SceneDelegate.swift in Sources */,
+				A7D63FB8245D9F4F00540744 /* APIConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
