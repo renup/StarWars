@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CAD001DB-0516-49BC-9EC5-BC5FC19E1B58"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C86B8EF-236B-4474-A999-5C9A954B3719"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWars/Views/StarWarsListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52F67F2F-9771-4073-AE73-AE367D54E9A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWars/Views/StarWarsListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E86F2A2C-D054-4381-96D4-1C02B9B64313"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWars/Network/Routers/APIRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "performRequest(of:with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E86F2A2C-D054-4381-96D4-1C02B9B64313 - c07f37ad3739f3d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in StarWars):StarWars.APIRouter.performRequest&lt;A where A1: Swift.Decodable&gt;(of: A1.Type, with: StarWars.APIConfiguration, completion: (Swift.Result&lt;A1, StarWars.APIServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "StarWars"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/StarWars/StarWars/Network/Routers/APIRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "519">
+               </Location>
+               <Location
+                  uuid = "E86F2A2C-D054-4381-96D4-1C02B9B64313 - 621a28320287ecfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;(__C.NSURLResponse, Foundation.Data), Swift.Error&gt;) -&gt; () in (extension in StarWars):StarWars.APIRouter.performRequest&lt;A where A1: Swift.Decodable&gt;(of: A1.Type, with: StarWars.APIConfiguration, completion: (Swift.Result&lt;A1, StarWars.APIServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "StarWars"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/StarWars/StarWars/Network/Routers/APIRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "494">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85223E80-9B9D-4ABB-B85E-84FC61E0B91C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWars/ViewModel/StarWarListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "getPeopleList(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "85223E80-9B9D-4ABB-B85E-84FC61E0B91C - 6f3ac308e4dd58c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StarWars.StarWarListViewModel.getPeopleList((Swift.Result&lt;Swift.Array&lt;StarWars.People&gt;, StarWars.APIServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "StarWars"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/StarWars/StarWars/ViewModel/StarWarListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "85223E80-9B9D-4ABB-B85E-84FC61E0B91C - c2edcf31d6f79a05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;StarWars.PeopleResponse, StarWars.APIServiceError&gt;) -&gt; () in StarWars.StarWarListViewModel.getPeopleList((Swift.Result&lt;Swift.Array&lt;StarWars.People&gt;, StarWars.APIServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "StarWars"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/StarWars/StarWars/ViewModel/StarWarListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "114">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "962E208E-D56A-4F60-A3E9-9293E9063E3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWars/Coordinators/StarWarListCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "start()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D01C641-4A0D-44FD-83DC-DE1923491729"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWars/Coordinators/StarWarListCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "beginFlow()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D01C641-4A0D-44FD-83DC-DE1923491729 - 2d61970bfb67eec7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StarWars.StarWarListCoordintor.beginFlow() -&gt; ()"
+                  moduleName = "StarWars"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/StarWars/StarWars/Coordinators/StarWarListCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "7D01C641-4A0D-44FD-83DC-DE1923491729 - a167053447ddb8f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;StarWars.People&gt;, StarWars.APIServiceError&gt;) -&gt; () in StarWars.StarWarListCoordintor.beginFlow() -&gt; ()"
+                  moduleName = "StarWars"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/StarWars/StarWars/Coordinators/StarWarListCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "212">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAC65719-B622-4442-8644-484D46E7D312"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWars/Network/Routers/APIRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "performRequest(of:with:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCCC31A3-1771-4B33-81AA-EDFDC96F69C3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWars/Views/StarWarListCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "configure(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

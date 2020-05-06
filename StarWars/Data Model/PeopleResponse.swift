@@ -11,10 +11,10 @@ import Foundation
 struct PeopleResponse: Decodable {
     var next: String?
     var previous: String?
-    var results: [People]?
+    var results: [People]
 }
 
 struct People: Decodable {
-    var name: String?
-    var gender: String?
+    var name: String
+    var gender: String
 }

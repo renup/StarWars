@@ -10,9 +10,16 @@ import UIKit
 
 final class StarWarsListViewController: UIViewController {
 
+    
+    lazy var tableView: StarWarsListView = {
+      let tableView = StarWarsListView()
+        return tableView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view = tableView
+        
     }
 
 

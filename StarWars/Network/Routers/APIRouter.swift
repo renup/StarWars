@@ -27,7 +27,7 @@ public enum APIServiceError: Error {
 }
 
 protocol APIRouter {
-    func performRequest<T: Decodable>(with route: APIConfiguration, completion: @escaping (Result<T, APIServiceError>) -> Void)
+    func performRequest<T: Decodable>(of: T.Type, with route: APIConfiguration, completion: @escaping (Result<T, APIServiceError>) -> Void)
 }
 
 extension APIRouter {
@@ -40,7 +40,7 @@ extension APIRouter {
         return urlComponents.url
     }
     
-    func performRequest<T: Decodable>(with route: APIConfiguration, completion: @escaping (Result<T, APIServiceError>) -> Void) {
+    func performRequest<T: Decodable>(of: T.Type, with route: APIConfiguration, completion: @escaping (Result<T, APIServiceError>) -> Void) {
         
         guard let url = getURL(route) else {
             completion(.failure(.invalidEndpoint))
