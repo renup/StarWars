@@ -13,6 +13,8 @@
 		A75D72242462DA5700EDD52F /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D72232462DA5700EDD52F /* UITableView+Utilities.swift */; };
 		A75D72262462E7C400EDD52F /* UIViewController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D72252462E7C400EDD52F /* UIViewController+Utilities.swift */; };
 		A75D72282462F65D00EDD52F /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D72272462F65D00EDD52F /* UIView+Utilities.swift */; };
+		A75D722A2463ABA500EDD52F /* StarWarsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D72292463ABA500EDD52F /* StarWarsDetailViewController.swift */; };
+		A75D722C2463AE3600EDD52F /* StarWarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D722B2463AE3600EDD52F /* StarWarDetailView.swift */; };
 		A7D63F7F245D9C4A00540744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63F7E245D9C4A00540744 /* AppDelegate.swift */; };
 		A7D63F81245D9C4A00540744 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63F80245D9C4A00540744 /* SceneDelegate.swift */; };
 		A7D63F83245D9C4A00540744 /* StarWarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63F82245D9C4A00540744 /* StarWarsListViewController.swift */; };
@@ -55,6 +57,8 @@
 		A75D72232462DA5700EDD52F /* UITableView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
 		A75D72252462E7C400EDD52F /* UIViewController+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utilities.swift"; sourceTree = "<group>"; };
 		A75D72272462F65D00EDD52F /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
+		A75D72292463ABA500EDD52F /* StarWarsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsDetailViewController.swift; sourceTree = "<group>"; };
+		A75D722B2463AE3600EDD52F /* StarWarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarDetailView.swift; sourceTree = "<group>"; };
 		A7D63F7B245D9C4A00540744 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D63F7E245D9C4A00540744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7D63F80245D9C4A00540744 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				A7D63F82245D9C4A00540744 /* StarWarsListViewController.swift */,
+				A75D72292463ABA500EDD52F /* StarWarsDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			children = (
 				A75D721D2462D72D00EDD52F /* StarWarsListView.swift */,
 				A75D721F2462D8A300EDD52F /* StarWarListCell.swift */,
+				A75D722B2463AE3600EDD52F /* StarWarDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,12 +394,14 @@
 				A7D63FBC245DA0C400540744 /* APIRouter.swift in Sources */,
 				A75D72222462D94200EDD52F /* ReusableView.swift in Sources */,
 				A7D63FC0245E128C00540744 /* URLSession+Utilities.swift in Sources */,
+				A75D722C2463AE3600EDD52F /* StarWarDetailView.swift in Sources */,
 				A75D721E2462D72D00EDD52F /* StarWarsListView.swift in Sources */,
 				A7D63F7F245D9C4A00540744 /* AppDelegate.swift in Sources */,
 				A7D63FC3245E1C5A00540744 /* StarWarListViewModel.swift in Sources */,
 				A75D72282462F65D00EDD52F /* UIView+Utilities.swift in Sources */,
 				A75D72202462D8A300EDD52F /* StarWarListCell.swift in Sources */,
 				A7D63FBA245D9FB600540744 /* Coordinator.swift in Sources */,
+				A75D722A2463ABA500EDD52F /* StarWarsDetailViewController.swift in Sources */,
 				A75D72262462E7C400EDD52F /* UIViewController+Utilities.swift in Sources */,
 				A7D63F81245D9C4A00540744 /* SceneDelegate.swift in Sources */,
 				A75D72242462DA5700EDD52F /* UITableView+Utilities.swift in Sources */,

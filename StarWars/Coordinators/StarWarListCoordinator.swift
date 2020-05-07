@@ -14,6 +14,7 @@ final class StarWarListCoordintor: Coordinator {
     var starWarsListVC: StarWarsListViewController?
     var navigationController: UINavigationController?
     let viewModel: StarWarListViewModel
+    var detailView: StarWarsDetailViewController?
     
     init(navigationController: UINavigationController?, returnViewController: UIViewController?) {
         self.navigationController = navigationController
@@ -32,7 +33,7 @@ final class StarWarListCoordintor: Coordinator {
         }
         
         starWarsListVC?.refreshList = {[weak self] in
-            self?.getPeopleList(nil)
+            self?.getPeopleList()
         }
         
         starWarsListVC?.filterContent = {[weak self] searchName in
@@ -43,7 +44,7 @@ final class StarWarListCoordintor: Coordinator {
     }
     
     func beginFlow() {
-       getPeopleList(nil)
+       getPeopleList()
     }
     
     func getPerson(by name: String) {
@@ -60,8 +61,8 @@ final class StarWarListCoordintor: Coordinator {
         }
     }
     
-    func getPeopleList(_ url: String?) {
-        viewModel.getPeopleList(url: url) {[weak self] (result) in
+    func getPeopleList() {
+        viewModel.getPeopleList() {[weak self] (result) in
            guard let self = self else { return }
            switch result {
            case .success(let people):
@@ -74,7 +75,26 @@ final class StarWarListCoordintor: Coordinator {
         }
     }
     
+    func getPersonDetails(_ url: String) {
+      
+        viewModel.getPersonDetails(url: url) {[weak self] (result) in
+           guard let self = self else { return }
+           switch result {
+           case .success(let people):
+            self.detailView?.person = people
+            guard let detailView = self.detailView else { return }
+            self.navigationController?.pushViewController(detailView, animated: true)
+           case .failure(let error):
+               if self.viewModel.shouldShowError(error: error) {
+                   self.detailView?.showAPIError(error)
+               }
+           }
+        }
+    }
+    
     func beginDetailFlow(_ person: People) {
-        getPeopleList(person.url)
+        detailView = StarWarsDetailViewController()
+        getPersonDetails(person.url)
+        
     }
 }

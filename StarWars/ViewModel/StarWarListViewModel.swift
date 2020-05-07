@@ -24,12 +24,23 @@ final class StarWarListViewModel: APIRouter {
         }
     }
     
-    func getPeopleList(url: String?, _ completion: @escaping (Result<[People], APIServiceError>) -> Void) {
-        performRequest(of: PeopleResponse.self, with: StarWarListEndPoint.peopleList, url: url) { (result) in
+    func getPeopleList( _ completion: @escaping (Result<[People], APIServiceError>) -> Void) {
+        performRequest(of: PeopleResponse.self, with: StarWarListEndPoint.peopleList, url: nil) { (result) in
             switch result {
             case .success(let response):
                 let peopleList = response.results
                 completion(.success(peopleList))
+            case .failure(let err):
+                completion(.failure(err))
+            }
+        }
+    }
+    
+    func getPersonDetails(url: String, _ completion: @escaping (Result<People, APIServiceError>) -> Void) {
+        performRequest(of: People.self, with: StarWarListEndPoint.peopleList, url: url) { result in
+            switch result {
+            case .success(let person):
+                completion(.success(person))
             case .failure(let err):
                 completion(.failure(err))
             }
