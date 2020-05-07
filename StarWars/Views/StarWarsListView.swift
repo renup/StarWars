@@ -16,13 +16,22 @@ final class StarWarsListView: UITableView {
             reloadData()
         }
     }
+    let searchController = UISearchController(searchResultsController: nil)
+    var activityView: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
+    var didSelectStarWar: (People) -> Void = {_ in }
+    var searching: (String) -> Void = { _ in }
+    var refreshList: () -> Void = { }
     
+    var isSearchBarEmpty: Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         registerCell()
         backgroundColor = .white
         dataSource = self
         delegate = self
+        setUpSearch()
     }
     
     required init?(coder: NSCoder) {
@@ -31,6 +40,29 @@ final class StarWarsListView: UITableView {
     
     func registerCell() {
         register(StarWarListCell.self)
+    }
+    
+    private func setUpSearch() {
+       searchController.searchBar.delegate = self
+       searchController.obscuresBackgroundDuringPresentation = false
+       searchController.searchBar.placeholder = "Search by StarWar name"
+    }
+    
+    @objc private func filterContentForSearchText(_ searchText: String) {
+        searching(searchText)
+    }
+    
+    //MARK: Activity Indicator methods
+      
+    func showActivityIndicator() {
+     activityView.center = self.center
+     addSubview(activityView)
+     activityView.startAnimating()
+    }
+
+    func hideActivityIndicator(){
+       activityView.stopAnimating()
+       activityView.hidesWhenStopped = true
     }
 }
 
@@ -49,6 +81,21 @@ extension StarWarsListView: UITableViewDataSource {
 
 extension StarWarsListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        defer {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        didSelectStarWar(peopleList[indexPath.row])
+    }
+}
+
+extension StarWarsListView: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        refreshList()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+         // to limit network activity, reload half a second after last key press.
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(filterContentForSearchText), object: nil)
+        perform(#selector(filterContentForSearchText), with: searchText, afterDelay: 1.0)
     }
 }

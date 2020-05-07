@@ -27,12 +27,27 @@ final class StarWarListCoordintor: Coordinator {
             return
         }
         starWarsListVC = listVC
+        starWarsListVC?.didSelectPerson = {[weak self] person in
+            self?.beginDetailFlow(person)
+        }
+        
+        starWarsListVC?.refreshList = {[weak self] in
+            self?.getPeopleList(nil)
+        }
+        
+        starWarsListVC?.filterContent = {[weak self] searchName in
+            self?.getPerson(by: searchName)
+        }
+        
         beginFlow()
     }
     
     func beginFlow() {
-        
-        viewModel.getPeopleList {[weak self] (result) in
+       getPeopleList(nil)
+    }
+    
+    func getPerson(by name: String) {
+        viewModel.searchPerson(by: name) {[weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let people):
@@ -43,6 +58,23 @@ final class StarWarListCoordintor: Coordinator {
                 }
             }
         }
-        
+    }
+    
+    func getPeopleList(_ url: String?) {
+        viewModel.getPeopleList(url: url) {[weak self] (result) in
+           guard let self = self else { return }
+           switch result {
+           case .success(let people):
+               self.starWarsListVC?.tableView.peopleList = people
+           case .failure(let error):
+               if self.viewModel.shouldShowError(error: error) {
+                   self.starWarsListVC?.showAPIError(error)
+               }
+           }
+        }
+    }
+    
+    func beginDetailFlow(_ person: People) {
+        getPeopleList(person.url)
     }
 }

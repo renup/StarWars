@@ -11,6 +11,7 @@ import Foundation
 enum StarWarListEndPoint: APIConfiguration {
     
     case peopleList
+    case searchPerson(_ name: String)
     
     struct Constants {
         static let baseURL = "https://swapi.dev/api/"
@@ -19,7 +20,7 @@ enum StarWarListEndPoint: APIConfiguration {
     
     var method: String {
         switch self {
-        case .peopleList: return "GET"
+        case .peopleList, .searchPerson: return "GET"
         }
     }
     
@@ -27,14 +28,15 @@ enum StarWarListEndPoint: APIConfiguration {
         switch self {
         case .peopleList:
             return []
-//            let peopleQuery = URLQueryItem(name: "people", value: "people")
-//            return [peopleQuery]
+        case .searchPerson(let name):
+            let nameQuery = URLQueryItem(name: "search", value: name)
+            return [nameQuery]
         }
     }
     
     var path: String {
         switch self {
-        case .peopleList: return Constants.baseURL + Constants.people
+        case .peopleList, .searchPerson: return Constants.baseURL + Constants.people
         }
     }
     

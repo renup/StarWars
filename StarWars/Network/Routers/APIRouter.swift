@@ -27,7 +27,8 @@ public enum APIServiceError: Error {
 }
 
 protocol APIRouter {
-    func performRequest<T: Decodable>(of: T.Type, with route: APIConfiguration, completion: @escaping (Result<T, APIServiceError>) -> Void)
+func performRequest<T: Decodable>(of: T.Type, with route: APIConfiguration, url: String?, completion: @escaping (Result<T, APIServiceError>) -> Void)
+    
 }
 
 extension APIRouter {
@@ -40,14 +41,20 @@ extension APIRouter {
         return urlComponents.url
     }
     
-    func performRequest<T: Decodable>(of: T.Type, with route: APIConfiguration, completion: @escaping (Result<T, APIServiceError>) -> Void) {
+    func performRequest<T: Decodable>(of: T.Type, with route: APIConfiguration, url: String?, completion: @escaping (Result<T, APIServiceError>) -> Void) {
+        var finalURL: URL
         
-        guard let url = getURL(route) else {
-            completion(.failure(.invalidEndpoint))
-            return
+        if let input = url, let inputURL = URL(string: input) {
+            finalURL = inputURL
+        } else {
+            guard let routeURL = getURL(route) else {
+                completion(.failure(.invalidEndpoint))
+                return
+            }
+            finalURL = routeURL
         }
-        
-        URLSession.shared.dataTask(with: url) { (result) in
+                
+        URLSession.shared.dataTask(with: finalURL) { (result) in
             switch result {
             case .success(let (response, data)):
                 guard let statusCode = (response as? HTTPURLResponse)?.statusCode, 200..<299 ~= statusCode  else {

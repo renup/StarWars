@@ -17,4 +17,5 @@ struct PeopleResponse: Decodable {
 struct People: Decodable {
     var name: String
     var gender: String
+    var url: String
 }

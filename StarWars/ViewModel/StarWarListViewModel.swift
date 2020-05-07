@@ -10,8 +10,22 @@ import Foundation
 
 final class StarWarListViewModel: APIRouter {
     
-    func getPeopleList(_ completion: @escaping (Result<[People], APIServiceError>) -> Void) {
-        performRequest(of: PeopleResponse.self, with: StarWarListEndPoint.peopleList) { (result) in
+    func searchPerson(by name: String?, _ completion: @escaping (Result<[People], APIServiceError>) -> Void) {
+        guard let name = name, !name.isEmpty else { return }
+        
+        performRequest(of: PeopleResponse.self, with: StarWarListEndPoint.searchPerson(name), url: nil) { (result) in
+            switch result {
+            case .success(let response):
+                let peopleList = response.results
+                completion(.success(peopleList))
+            case .failure(let err):
+                completion(.failure(err))
+            }
+        }
+    }
+    
+    func getPeopleList(url: String?, _ completion: @escaping (Result<[People], APIServiceError>) -> Void) {
+        performRequest(of: PeopleResponse.self, with: StarWarListEndPoint.peopleList, url: url) { (result) in
             switch result {
             case .success(let response):
                 let peopleList = response.results
