@@ -12,53 +12,63 @@ import UIKit
 final class StarWarDetailView: UIView {
     
     struct Layout {
-        static let insets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        static let insets = UIEdgeInsets(top: 20, left: 20, bottom: 50, right: 20)
+        static let spacing: CGFloat = 5
+        static let height: CGFloat = 40
     }
     
     private lazy var genderLabel: UILabel = {
         let label = UILabel(frame: .zero)
+        label.height(constant: Layout.height)
         return label
     }()
     
     private lazy var weightLabel: UILabel = {
         let label = UILabel(frame: .zero)
+        label.height(constant: Layout.height)
         return label
     }()
     
     private lazy var heightLabel: UILabel = {
         let label = UILabel(frame: .zero)
+        label.height(constant: Layout.height)
         return label
     }()
     
     private lazy var hairColorLabel: UILabel = {
         let label = UILabel(frame: .zero)
+        label.height(constant: Layout.height)
         return label
     }()
     
     private lazy var filmsLabel: UILabel = {
         let label = UILabel(frame: .zero)
+        label.height(constant: Layout.height)
         return label
     }()
     
     private lazy var speciesLabel: UILabel = {
         let label = UILabel(frame: .zero)
+        label.height(constant: Layout.height)
         return label
     }()
     
     private lazy var vehiclesLabel: UILabel = {
         let label = UILabel(frame: .zero)
+        label.height(constant: Layout.height)
         return label
     }()
     
     private lazy var starshipsLabel: UILabel = {
         let label = UILabel(frame: .zero)
+        label.height(constant: Layout.height)
         return label
     }()
     
     private lazy var stackView: UIStackView = {
       let stack = UIStackView(arrangedSubviews: [genderLabel, weightLabel, heightLabel, hairColorLabel, filmsLabel, speciesLabel, vehiclesLabel, starshipsLabel])
         stack.axis = .vertical
-        stack.spacing = 10
+        stack.spacing = Layout.spacing
         return stack
     }()
     
@@ -77,7 +87,7 @@ final class StarWarDetailView: UIView {
     }
     
     private func configureLayout() {
-        wrap(view: stackView, insets: Layout.insets)
+        wrapToSafeArea(stackView, exceptBottom: true, insets: Layout.insets)
     }
     
     func configureLabels() {
