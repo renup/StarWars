@@ -36,6 +36,7 @@ final class StarWarsListViewController: UIViewController {
         super.viewDidLoad()
         view = tableView
         title = "Star Wars"
+
         navigationItem.searchController = tableView.searchController
         definesPresentationContext = true
     }

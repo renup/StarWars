@@ -14,8 +14,8 @@ final class StarWarListCell: UITableViewCell, ReusableView {
     struct Layout {
         static let boldFontSize: CGFloat = 15
         static let systemFontSize: CGFloat = 13
-        static let spacing: CGFloat = 5
-        static let insets: UIEdgeInsets = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+        static let spacing: CGFloat = 10
+        static let insets: UIEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
     }
     
     private lazy var nameLabel: UILabel = {

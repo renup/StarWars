@@ -13,9 +13,14 @@ final class StarWarsDetailViewController: UIViewController {
     
     var person: People?
     
+    private var detailView: StarWarDetailView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = person?.name
         view.backgroundColor = .white
+        guard let person = person else { return }
+        detailView = StarWarDetailView(person)
+        view = detailView
+        title = person.name
     }
 }
