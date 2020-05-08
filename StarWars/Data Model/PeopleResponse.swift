@@ -9,9 +9,9 @@
 import Foundation
 
 struct PeopleResponse: Decodable {
-    var next: String?
-    var previous: String?
-    var results: [People]
+    let next: String?
+    let previous: String?
+    let results: [People]
 }
 
 struct People: Decodable {
