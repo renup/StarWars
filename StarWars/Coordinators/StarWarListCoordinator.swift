@@ -48,6 +48,7 @@ class StarWarListCoordintor: Coordinator {
     }
     
     func getPerson(by name: String) {
+        starWarsListVC?.tableView.showActivityIndicator()
         viewModel.searchPerson(by: name) {[weak self] (result) in
             guard let self = self else { return }
             switch result {
@@ -58,10 +59,12 @@ class StarWarListCoordintor: Coordinator {
                     self.starWarsListVC?.showAPIError(error)
                 }
             }
+            self.starWarsListVC?.tableView.hideActivityIndicator()
         }
     }
     
     func getPeopleList() {
+        starWarsListVC?.tableView.showActivityIndicator()
         viewModel.getPeopleList() {[weak self] (result) in
            guard let self = self else { return }
            switch result {
@@ -72,11 +75,13 @@ class StarWarListCoordintor: Coordinator {
                    self.starWarsListVC?.showAPIError(error)
                }
            }
+            self.starWarsListVC?.tableView.hideActivityIndicator()
         }
     }
     
     func getPersonDetails(_ url: String) {
-      
+      starWarsListVC?.tableView.showActivityIndicator()
+
         viewModel.getPersonDetails(url: url) {[weak self] (result) in
            guard let self = self else { return }
            switch result {
@@ -89,6 +94,7 @@ class StarWarListCoordintor: Coordinator {
                    self.detailView?.showAPIError(error)
                }
            }
+            self.starWarsListVC?.tableView.hideActivityIndicator()
         }
     }
     
