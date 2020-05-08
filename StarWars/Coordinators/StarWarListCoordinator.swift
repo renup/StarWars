@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class StarWarListCoordintor: Coordinator {
+class StarWarListCoordintor: Coordinator {
     var returnViewController: UIViewController?
     var starWarsListVC: StarWarsListViewController?
     var navigationController: UINavigationController?
@@ -98,3 +98,22 @@ final class StarWarListCoordintor: Coordinator {
         
     }
 }
+
+//For testing reasons
+
+extension StarWarListCoordintor {
+    
+    func triggerDidSelectPerson() {
+        let people = People(name: "Luke Skywalker", gender: "male", url: "http://swapi.dev/api/people/1/", height: "172", mass: "77", hair_color: "blond", films: ["film"], species: ["species"], vehicles: ["vehicles"], starships: ["starships"])
+        starWarsListVC?.tableView.didSelectStarWar(people)
+    }
+    
+    func triggerFilterContent() {
+        starWarsListVC?.filterContent("Luke")
+    }
+    
+    func triggerRefreshList() {
+        starWarsListVC?.refreshList()
+    }
+}
+

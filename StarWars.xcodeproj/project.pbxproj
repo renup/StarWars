@@ -15,6 +15,13 @@
 		A75D72282462F65D00EDD52F /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D72272462F65D00EDD52F /* UIView+Utilities.swift */; };
 		A75D722A2463ABA500EDD52F /* StarWarsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D72292463ABA500EDD52F /* StarWarsDetailViewController.swift */; };
 		A75D722C2463AE3600EDD52F /* StarWarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D722B2463AE3600EDD52F /* StarWarDetailView.swift */; };
+		A75D72312464F96E00EDD52F /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D72302464F96E00EDD52F /* AppCoordinatorTests.swift */; };
+		A75D72332464FA5D00EDD52F /* StarWarListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D72322464FA5D00EDD52F /* StarWarListCoordinatorTests.swift */; };
+		A75D72362464FCF100EDD52F /* JsonKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D72352464FCF100EDD52F /* JsonKit.swift */; };
+		A75D72392464FDC900EDD52F /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = A75D72372464FDC900EDD52F /* people.json */; };
+		A75D723C2465075700EDD52F /* XCTestCase+UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75D723B2465075700EDD52F /* XCTestCase+UIHelpers.swift */; };
+		A75D724024650DE300EDD52F /* LukeDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = A75D723F24650DE300EDD52F /* LukeDetail.json */; };
+		A75D724224650DF500EDD52F /* LukeSearchResult.json in Resources */ = {isa = PBXBuildFile; fileRef = A75D724124650DF500EDD52F /* LukeSearchResult.json */; };
 		A7D63F7F245D9C4A00540744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63F7E245D9C4A00540744 /* AppDelegate.swift */; };
 		A7D63F81245D9C4A00540744 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63F80245D9C4A00540744 /* SceneDelegate.swift */; };
 		A7D63F83245D9C4A00540744 /* StarWarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D63F82245D9C4A00540744 /* StarWarsListViewController.swift */; };
@@ -59,6 +66,13 @@
 		A75D72272462F65D00EDD52F /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
 		A75D72292463ABA500EDD52F /* StarWarsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsDetailViewController.swift; sourceTree = "<group>"; };
 		A75D722B2463AE3600EDD52F /* StarWarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarDetailView.swift; sourceTree = "<group>"; };
+		A75D72302464F96E00EDD52F /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		A75D72322464FA5D00EDD52F /* StarWarListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarListCoordinatorTests.swift; sourceTree = "<group>"; };
+		A75D72352464FCF100EDD52F /* JsonKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonKit.swift; sourceTree = "<group>"; };
+		A75D72372464FDC900EDD52F /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
+		A75D723B2465075700EDD52F /* XCTestCase+UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+UIHelpers.swift"; sourceTree = "<group>"; };
+		A75D723F24650DE300EDD52F /* LukeDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LukeDetail.json; sourceTree = "<group>"; };
+		A75D724124650DF500EDD52F /* LukeSearchResult.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LukeSearchResult.json; sourceTree = "<group>"; };
 		A7D63F7B245D9C4A00540744 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D63F7E245D9C4A00540744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7D63F80245D9C4A00540744 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +122,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A75D722D2464F8FD00EDD52F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A75D72302464F96E00EDD52F /* AppCoordinatorTests.swift */,
+				A75D72322464FA5D00EDD52F /* StarWarListCoordinatorTests.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		A75D72342464FCBA00EDD52F /* Testing Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A75D72352464FCF100EDD52F /* JsonKit.swift */,
+				A75D723B2465075700EDD52F /* XCTestCase+UIHelpers.swift */,
+			);
+			path = "Testing Tools";
+			sourceTree = "<group>";
+		};
 		A7D63F72245D9C4A00540744 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +173,9 @@
 				A7D63FAE245D9CDD00540744 /* ViewControllers */,
 				A7D63F7E245D9C4A00540744 /* AppDelegate.swift */,
 				A7D63F80245D9C4A00540744 /* SceneDelegate.swift */,
+				A75D723F24650DE300EDD52F /* LukeDetail.json */,
+				A75D724124650DF500EDD52F /* LukeSearchResult.json */,
+				A75D72372464FDC900EDD52F /* people.json */,
 				A7D63F87245D9C4C00540744 /* Assets.xcassets */,
 				A7D63F89245D9C4C00540744 /* LaunchScreen.storyboard */,
 				A7D63F8C245D9C4C00540744 /* Info.plist */,
@@ -151,6 +186,8 @@
 		A7D63F94245D9C4C00540744 /* StarWarsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A75D72342464FCBA00EDD52F /* Testing Tools */,
+				A75D722D2464F8FD00EDD52F /* Coordinators */,
 				A7D63F95245D9C4C00540744 /* StarWarsTests.swift */,
 				A7D63F97245D9C4C00540744 /* Info.plist */,
 			);
@@ -362,6 +399,9 @@
 			files = (
 				A7D63F8B245D9C4C00540744 /* LaunchScreen.storyboard in Resources */,
 				A7D63F88245D9C4C00540744 /* Assets.xcassets in Resources */,
+				A75D72392464FDC900EDD52F /* people.json in Resources */,
+				A75D724024650DE300EDD52F /* LukeDetail.json in Resources */,
+				A75D724224650DF500EDD52F /* LukeSearchResult.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +453,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75D72312464F96E00EDD52F /* AppCoordinatorTests.swift in Sources */,
 				A7D63F96245D9C4C00540744 /* StarWarsTests.swift in Sources */,
+				A75D72362464FCF100EDD52F /* JsonKit.swift in Sources */,
+				A75D723C2465075700EDD52F /* XCTestCase+UIHelpers.swift in Sources */,
+				A75D72332464FA5D00EDD52F /* StarWarListCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
